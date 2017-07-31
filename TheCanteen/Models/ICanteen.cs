@@ -4,7 +4,7 @@ namespace TheCanteen.Models
 {
     public interface ICanteen
     {
-        Guid CanteenId { get; set; }
-        string CanteenName { get; set; }
+        int Id { get; set; }
+        string Name { get; set; }
     }
 }
