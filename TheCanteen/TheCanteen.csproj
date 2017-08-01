@@ -219,14 +219,17 @@
     <Compile Include="Controllers\CanteensController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductDefinitionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Canteen\EntityCanteen.cs" />
-    <Compile Include="Models\Canteen\ICanteen.cs" />
+    <Compile Include="Models\Canteen\CanteenContext.cs" />
+    <Compile Include="Models\Canteen\Canteen.cs" />
     <Compile Include="Models\Canteen\ICanteenContext.cs" />
+    <Compile Include="Models\Canteen\Inventory\CanteenProduct.cs" />
+    <Compile Include="Models\Canteen\Inventory\ProductDefinition.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +299,11 @@
     <Content Include="Views\Canteens\Details.cshtml" />
     <Content Include="Views\Canteens\Edit.cshtml" />
     <Content Include="Views\Canteens\Index.cshtml" />
+    <Content Include="Views\ProductDefinitions\Create.cshtml" />
+    <Content Include="Views\ProductDefinitions\Delete.cshtml" />
+    <Content Include="Views\ProductDefinitions\Details.cshtml" />
+    <Content Include="Views\ProductDefinitions\Edit.cshtml" />
+    <Content Include="Views\ProductDefinitions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

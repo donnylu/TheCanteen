@@ -7,120 +7,116 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TheCanteen.Models.Canteen;
+using TheCanteen.Models.Canteen.Inventory;
 
 namespace TheCanteen.Controllers
 {
-    public class CanteensController : Controller
+    public class ProductDefinitionsController : Controller
     {
         private ICanteenContext db;
 
-        public CanteensController(ICanteenContext db)
+        public ProductDefinitionsController(ICanteenContext db)
         {
             this.db = db;
         }
 
-        public CanteensController()
-        {
-
-        }
-
-        // GET: Canteens
+        // GET: ProductDefinitions
         public ActionResult Index()
         {
-            return View(db.Canteens.ToList());
+            return View(db.ProductDefinitions.ToList());
         }
 
-        // GET: Canteens/Details/5
+        // GET: ProductDefinitions/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            ProductDefinition productDefinition = db.ProductDefinitions.Find(id);
+            if (productDefinition == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(productDefinition);
         }
 
-        // GET: Canteens/Create
+        // GET: ProductDefinitions/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Canteens/Create
+        // POST: ProductDefinitions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Canteen entityCanteen)
+        public ActionResult Create([Bind(Include = "Id,Name,Description")] ProductDefinition productDefinition)
         {
             if (ModelState.IsValid)
             {
-                db.Canteens.Add(entityCanteen);
+                db.ProductDefinitions.Add(productDefinition);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(entityCanteen);
+            return View(productDefinition);
         }
 
-        // GET: Canteens/Edit/5
+        // GET: ProductDefinitions/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            ProductDefinition productDefinition = db.ProductDefinitions.Find(id);
+            if (productDefinition == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(productDefinition);
         }
 
-        // POST: Canteens/Edit/5
+        // POST: ProductDefinitions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] Canteen entityCanteen)
+        public ActionResult Edit([Bind(Include = "Id,Name,Description")] ProductDefinition productDefinition)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(entityCanteen).State = EntityState.Modified;
+                db.Entry(productDefinition).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(entityCanteen);
+            return View(productDefinition);
         }
 
-        // GET: Canteens/Delete/5
+        // GET: ProductDefinitions/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            ProductDefinition productDefinition = db.ProductDefinitions.Find(id);
+            if (productDefinition == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(productDefinition);
         }
 
-        // POST: Canteens/Delete/5
+        // POST: ProductDefinitions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Canteen entityCanteen = db.Canteens.Find(id);
-            db.Canteens.Remove(entityCanteen);
+            ProductDefinition productDefinition = db.ProductDefinitions.Find(id);
+            db.ProductDefinitions.Remove(productDefinition);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

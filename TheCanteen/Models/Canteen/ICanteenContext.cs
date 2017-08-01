@@ -5,12 +5,16 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Threading;
 using System.Threading.Tasks;
+using TheCanteen.Models.Canteen.Inventory;
 
 namespace TheCanteen.Models.Canteen
 {
     public interface ICanteenContext
     {
-        DbSet<EntityCanteen> Canteens { get; set; }
+        DbSet<Canteen> Canteens { get; set; }
+        DbSet<ProductDefinition> ProductDefinitions { get; set; }
+
+        
         Database Database { get; }
         DbChangeTracker ChangeTracker { get; }
         DbContextConfiguration Configuration { get; }
