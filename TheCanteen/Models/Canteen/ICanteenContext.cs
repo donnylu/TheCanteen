@@ -13,8 +13,8 @@ namespace TheCanteen.Models.Canteen
     {
         DbSet<Canteen> Canteens { get; set; }
         DbSet<ProductDefinition> ProductDefinitions { get; set; }
+        DbSet<CanteenProduct> CanteenProducts { get; set; }
 
-        
         Database Database { get; }
         DbChangeTracker ChangeTracker { get; }
         DbContextConfiguration Configuration { get; }

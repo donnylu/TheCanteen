@@ -7,5 +7,6 @@ namespace TheCanteen.Models.Canteen
     {
         public DbSet<Canteen> Canteens { get; set; }
         public DbSet<ProductDefinition> ProductDefinitions { get; set; }
+        public DbSet<CanteenProduct> CanteenProducts { get; set; }
     }
 }

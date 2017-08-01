@@ -9,9 +9,9 @@ namespace TheCanteen.Models.Canteen.Inventory
 {
     public class CanteenProduct
     {
-        [Key, ForeignKey("Canteen")]
+        [Column(Order=0), Key, ForeignKey("Canteen")]
         public int CanteenId { get; set; }
-        [ Key, ForeignKey("Product")]
+        [Column(Order=1), Key, ForeignKey("Product")]
         public int ProductDefinitionId { get; set; }
         public int Stock { get; set; }
         public decimal Price { get; set; }

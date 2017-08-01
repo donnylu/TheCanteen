@@ -37,12 +37,12 @@ namespace TheCanteen.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            Canteen Canteen = db.Canteens.Find(id);
+            if (Canteen == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(Canteen);
         }
 
         // GET: Canteens/Create
@@ -56,16 +56,16 @@ namespace TheCanteen.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] Canteen entityCanteen)
+        public ActionResult Create([Bind(Include = "Id,Name")] Canteen Canteen)
         {
             if (ModelState.IsValid)
             {
-                db.Canteens.Add(entityCanteen);
+                db.Canteens.Add(Canteen);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(entityCanteen);
+            return View(Canteen);
         }
 
         // GET: Canteens/Edit/5
@@ -75,12 +75,12 @@ namespace TheCanteen.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            Canteen Canteen = db.Canteens.Find(id);
+            if (Canteen == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(Canteen);
         }
 
         // POST: Canteens/Edit/5
@@ -88,15 +88,15 @@ namespace TheCanteen.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] Canteen entityCanteen)
+        public ActionResult Edit([Bind(Include = "Id,Name")] Canteen Canteen)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(entityCanteen).State = EntityState.Modified;
+                db.Entry(Canteen).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(entityCanteen);
+            return View(Canteen);
         }
 
         // GET: Canteens/Delete/5
@@ -106,12 +106,12 @@ namespace TheCanteen.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Canteen entityCanteen = db.Canteens.Find(id);
-            if (entityCanteen == null)
+            Canteen Canteen = db.Canteens.Find(id);
+            if (Canteen == null)
             {
                 return HttpNotFound();
             }
-            return View(entityCanteen);
+            return View(Canteen);
         }
 
         // POST: Canteens/Delete/5
@@ -119,8 +119,8 @@ namespace TheCanteen.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Canteen entityCanteen = db.Canteens.Find(id);
-            db.Canteens.Remove(entityCanteen);
+            Canteen Canteen = db.Canteens.Find(id);
+            db.Canteens.Remove(Canteen);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
