@@ -6,13 +6,18 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using TheCanteen.Models;
+using TheCanteen.Models.Canteen;
 
 namespace TheCanteen.Controllers
 {
     public class CanteensController : Controller
     {
-        private CanteenContext db = new CanteenContext();
+        private ICanteenContext db;
+
+        public CanteensController(ICanteenContext db)
+        {
+            this.db = db;
+        }
 
         public CanteensController()
         {

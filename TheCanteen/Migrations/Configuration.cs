@@ -1,11 +1,9 @@
 namespace TheCanteen.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
+    using TheCanteen.Models.Canteen;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TheCanteen.Models.CanteenContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CanteenContext>
     {
         public Configuration()
         {
@@ -13,7 +11,7 @@ namespace TheCanteen.Migrations
             ContextKey = "TheCanteen.Models.CanteenContext";
         }
 
-        protected override void Seed(TheCanteen.Models.CanteenContext context)
+        protected override void Seed(CanteenContext context)
         {
             //  This method will be called after migrating to the latest version.
 

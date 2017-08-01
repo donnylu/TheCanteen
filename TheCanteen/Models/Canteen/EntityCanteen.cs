@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 
-namespace TheCanteen.Models
+namespace TheCanteen.Models.Canteen
 {
     public class EntityCanteen : ICanteen
     {

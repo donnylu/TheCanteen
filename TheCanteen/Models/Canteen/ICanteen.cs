@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TheCanteen.Models
+﻿namespace TheCanteen.Models.Canteen
 {
     public interface ICanteen
     {
