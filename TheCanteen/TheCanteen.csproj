@@ -217,7 +217,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CanteensController.cs" />
+    <Compile Include="Controllers\Customers\CustomerCreditsController.cs" />
+    <Compile Include="Controllers\Customers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Inventory\CanteenProductsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductDefinitionsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,6 +230,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Canteen\CanteenContext.cs" />
     <Compile Include="Models\Canteen\Canteen.cs" />
+    <Compile Include="Models\Canteen\Customers\Customer.cs" />
+    <Compile Include="Models\Canteen\Customers\CustomerCredit.cs" />
     <Compile Include="Models\Canteen\ICanteenContext.cs" />
     <Compile Include="Models\Canteen\Inventory\CanteenProduct.cs" />
     <Compile Include="Models\Canteen\Inventory\ProductDefinition.cs" />
@@ -267,7 +272,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -304,6 +311,21 @@
     <Content Include="Views\ProductDefinitions\Details.cshtml" />
     <Content Include="Views\ProductDefinitions\Edit.cshtml" />
     <Content Include="Views\ProductDefinitions\Index.cshtml" />
+    <Content Include="Views\CanteenProducts\Create.cshtml" />
+    <Content Include="Views\CanteenProducts\Delete.cshtml" />
+    <Content Include="Views\CanteenProducts\Details.cshtml" />
+    <Content Include="Views\CanteenProducts\Edit.cshtml" />
+    <Content Include="Views\CanteenProducts\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\CustomerCredits\Create.cshtml" />
+    <Content Include="Views\CustomerCredits\Delete.cshtml" />
+    <Content Include="Views\CustomerCredits\Details.cshtml" />
+    <Content Include="Views\CustomerCredits\Edit.cshtml" />
+    <Content Include="Views\CustomerCredits\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
