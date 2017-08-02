@@ -13,5 +13,7 @@ namespace TheCanteen.Models.Canteen
 		public DbSet<Customer> Customers { get; set; }
 
 		public System.Data.Entity.DbSet<TheCanteen.Models.Canteen.Customers.CustomerCredit> CustomerCredits { get; set; }
+
+		public System.Data.Entity.DbSet<TheCanteen.Models.Canteen.PointOfSale.Transaction> Transactions { get; set; }
 	}
 }
