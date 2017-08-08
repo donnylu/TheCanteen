@@ -222,6 +222,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Inventory\CanteenProductsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PointOfSale\SalesController.cs" />
     <Compile Include="Controllers\PointOfSale\TransactionsController.cs" />
     <Compile Include="Controllers\ProductDefinitionsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +237,7 @@
     <Compile Include="Models\Canteen\ICanteenContext.cs" />
     <Compile Include="Models\Canteen\Inventory\CanteenProduct.cs" />
     <Compile Include="Models\Canteen\Inventory\ProductDefinition.cs" />
+    <Compile Include="Models\Canteen\PointOfSale\Sale.cs" />
     <Compile Include="Models\Canteen\PointOfSale\Transaction.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -258,6 +260,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jQuery.tmpl.js" />
+    <Content Include="Scripts\jQuery.tmpl.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -265,6 +269,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Sales\sales.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -328,6 +333,9 @@
     <Content Include="Views\CustomerCredits\Details.cshtml" />
     <Content Include="Views\CustomerCredits\Edit.cshtml" />
     <Content Include="Views\CustomerCredits\Index.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
     <Content Include="Views\Transactions\Create.cshtml" />
     <Content Include="Views\Transactions\Delete.cshtml" />
     <Content Include="Views\Transactions\Details.cshtml" />

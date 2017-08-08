@@ -15,9 +15,10 @@ namespace TheCanteen.Models.Canteen.Inventory
 		public int ProductDefinitionId { get; set; }
 		public int Stock { get; set; }
 		public decimal Price { get; set; }
+		public string Name => Product.Name;
+
 
 		public virtual Canteen Canteen { get; set; }
-
 		public virtual ProductDefinition Product { get; set; }
 	}
 }

@@ -9,14 +9,17 @@ namespace TheCanteen.Models.Canteen.PointOfSale
 	{
 		[Key]
 		public int Id { get; set; }
-		[ForeignKey("Customer")]
-		public int CustomerId { get; set; }
 		[ForeignKey("CanteenProduct"), Column(Order=0)]
 		public int CanteenId { get; set; }
 		[ForeignKey("CanteenProduct"), Column(Order=1)]
-		public int CanteenProductId { get; set; }
+		public int ProductDefinitionId { get; set; }
+		[ForeignKey("Sale")]
+		public int SaleId { get; set; }
 
-		public Customer Customer { get; set; }
+		public int Quantity { get; set; }
+		public decimal ProductPrice { get; set; }
+
 		public CanteenProduct CanteenProduct { get; set; }
+		public Sale Sale { get; set; }
 	}
 }

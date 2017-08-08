@@ -5,7 +5,9 @@ using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Threading;
 using System.Threading.Tasks;
+using TheCanteen.Models.Canteen.Customers;
 using TheCanteen.Models.Canteen.Inventory;
+using TheCanteen.Models.Canteen.PointOfSale;
 
 namespace TheCanteen.Models.Canteen
 {
@@ -14,6 +16,10 @@ namespace TheCanteen.Models.Canteen
 		DbSet<Canteen> Canteens { get; set; }
 		DbSet<ProductDefinition> ProductDefinitions { get; set; }
 		DbSet<CanteenProduct> CanteenProducts { get; set; }
+		DbSet<Customer> Customers { get; set; }
+		DbSet<Transaction> Transactions { get; set; }
+
+		DbSet<Sale> Sales { get; set; }
 
 		Database Database { get; }
 		DbChangeTracker ChangeTracker { get; }
